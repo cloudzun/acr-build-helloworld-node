@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "chengzhaks0306-8f66"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "chengzhaks0306-8f66"
+  template:
+    metadata:
+      labels:
+        app: "chengzhaks0306-8f66"
+    spec:
+      containers:
+        - name: "chengzhaks0306-8f66"
+          image: "chengzhacr0306.azurecr.io/chengzhaks0306"
+          ports:
+          - containerPort: 80
