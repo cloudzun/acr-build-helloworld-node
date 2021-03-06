@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "chengzhaks0306-8f66"
+    labels:
+        app: "chengzhaks0306-8f66"
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+      name: http
+    selector:
+        app: "chengzhaks0306-8f66"
