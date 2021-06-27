@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "myakscluster-ff3f"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "myakscluster-ff3f"
+  template:
+    metadata:
+      labels:
+        app: "myakscluster-ff3f"
+    spec:
+      containers:
+        - name: "myakscluster-ff3f"
+          image: "chengzhacr0427.azurecr.io/myakscluster"
+          ports:
+          - containerPort: 80
